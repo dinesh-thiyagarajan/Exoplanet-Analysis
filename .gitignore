@@ -17,9 +17,7 @@ env/
 data/*.csv
 data/*.parquet
 
-# Model artifacts
-models/*.joblib
-models/*.pkl
+# Model artifacts (tracked in this repo for reproducibility)
 
 # IDE
 .vscode/

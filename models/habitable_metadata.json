@@ -1,0 +1,85 @@
+{
+  "target": "habitable",
+  "best_model": "GradientBoosting",
+  "features": [
+    "pl_orbper",
+    "pl_orbsmax",
+    "pl_rade",
+    "pl_bmasse",
+    "pl_orbeccen",
+    "pl_eqt",
+    "pl_insol",
+    "st_teff",
+    "st_rad",
+    "st_mass",
+    "st_lum",
+    "st_logg",
+    "st_met",
+    "sy_dist",
+    "st_lum_linear",
+    "radius_mass_ratio",
+    "planet_star_radius_ratio",
+    "flux_temp_ratio",
+    "log_pl_orbper",
+    "log_pl_bmasse",
+    "log_pl_rade",
+    "log_sy_dist"
+  ],
+  "n_train": 2932,
+  "n_test": 733,
+  "cv_results": {
+    "RandomForest": {
+      "mean_f1": 0.9620620842572063,
+      "std_f1": 0.030847377686350198
+    },
+    "GradientBoosting": {
+      "mean_f1": 0.9722889702469963,
+      "std_f1": 0.016902321943207285
+    },
+    "LogisticRegression": {
+      "mean_f1": 0.5756907353527072,
+      "std_f1": 0.02378165462703427
+    }
+  },
+  "test_accuracy": 0.9959072305593452,
+  "test_f1": 0.9433962264150944,
+  "classification_report": {
+    "Not Habitable": {
+      "precision": 0.9985835694050992,
+      "recall": 0.9971711456859972,
+      "f1-score": 0.9978768577494692,
+      "support": 707.0
+    },
+    "Potentially Habitable": {
+      "precision": 0.9259259259259259,
+      "recall": 0.9615384615384616,
+      "f1-score": 0.9433962264150944,
+      "support": 26.0
+    },
+    "accuracy": 0.9959072305593452,
+    "macro avg": {
+      "precision": 0.9622547476655126,
+      "recall": 0.9793548036122294,
+      "f1-score": 0.9706365420822818,
+      "support": 733.0
+    },
+    "weighted avg": {
+      "precision": 0.9960063542202989,
+      "recall": 0.9959072305593452,
+      "f1-score": 0.9959443933365172,
+      "support": 733.0
+    }
+  },
+  "feature_importances": {
+    "pl_eqt": 0.4943397038745168,
+    "pl_rade": 0.269429243993871,
+    "log_pl_rade": 0.13405266113217174,
+    "pl_insol": 0.07014816025054116,
+    "flux_temp_ratio": 0.015622327211175622,
+    "planet_star_radius_ratio": 0.010859795640883846,
+    "st_met": 0.003473214424535334,
+    "st_teff": 0.0020621896243020544,
+    "log_pl_bmasse": 8.572444697933076e-06,
+    "pl_orbsmax": 1.1358207744360853e-06
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "target": "planet_type",
+  "best_model": "RandomForest",
+  "features": [
+    "pl_orbper",
+    "pl_orbsmax",
+    "pl_rade",
+    "pl_bmasse",
+    "pl_orbeccen",
+    "pl_eqt",
+    "pl_insol",
+    "st_teff",
+    "st_rad",
+    "st_mass",
+    "st_lum",
+    "st_logg",
+    "st_met",
+    "sy_dist",
+    "st_lum_linear",
+    "radius_mass_ratio",
+    "planet_star_radius_ratio",
+    "flux_temp_ratio",
+    "log_pl_orbper",
+    "log_pl_bmasse",
+    "log_pl_rade",
+    "log_sy_dist"
+  ],
+  "n_train": 4000,
+  "n_test": 1000,
+  "cv_results": {
+    "RandomForest": {
+      "mean_f1": 0.9995005326835003,
+      "std_f1": 0.0006117210385076937
+    },
+    "GradientBoosting": {
+      "mean_f1": 0.9990029686899963,
+      "std_f1": 0.0009313691181453408
+    }
+  },
+  "test_accuracy": 0.999,
+  "test_f1": 0.9990044844044844,
+  "classification_report": {
+    "Gas Giant": {
+      "precision": 0.9782608695652174,
+      "recall": 1.0,
+      "f1-score": 0.989010989010989,
+      "support": 45.0
+    },
+    "Neptune-like": {
+      "precision": 1.0,
+      "recall": 0.9959677419354839,
+      "f1-score": 0.997979797979798,
+      "support": 248.0
+    },
+    "Rocky": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 190.0
+    },
+    "Sub-Neptune": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 242.0
+    },
+    "Super-Earth": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 193.0
+    },
+    "Unknown": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 82.0
+    },
+    "accuracy": 0.999,
+    "macro avg": {
+      "precision": 0.9963768115942028,
+      "recall": 0.9993279569892474,
+      "f1-score": 0.9978317978317978,
+      "support": 1000.0
+    },
+    "weighted avg": {
+      "precision": 0.9990217391304348,
+      "recall": 0.999,
+      "f1-score": 0.9990044844044844,
+      "support": 1000.0
+    }
+  },
+  "feature_importances": {
+    "pl_rade": 0.3216088046881008,
+    "log_pl_rade": 0.3040230020206745,
+    "planet_star_radius_ratio": 0.13438834772527597,
+    "pl_bmasse": 0.07345452283611566,
+    "log_pl_bmasse": 0.06704645704568267,
+    "radius_mass_ratio": 0.0619693936476317,
+    "st_rad": 0.006558674171761773,
+    "st_mass": 0.004523876931511884,
+    "st_logg": 0.00318574239287479,
+    "st_lum_linear": 0.0023894215792265175
+  }
+}
