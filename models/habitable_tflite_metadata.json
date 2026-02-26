@@ -1,0 +1,111 @@
+{
+  "model_file": "habitable_model.tflite",
+  "task": "binary_classification",
+  "target": "habitable",
+  "labels": [
+    "Not Habitable",
+    "Potentially Habitable"
+  ],
+  "features": [
+    "pl_orbper",
+    "pl_orbsmax",
+    "pl_rade",
+    "pl_bmasse",
+    "pl_orbeccen",
+    "pl_eqt",
+    "pl_insol",
+    "st_teff",
+    "st_rad",
+    "st_mass",
+    "st_logg",
+    "st_met",
+    "sy_dist",
+    "radius_mass_ratio",
+    "planet_star_radius_ratio",
+    "flux_temp_ratio",
+    "log_pl_orbper",
+    "log_pl_bmasse",
+    "log_pl_rade",
+    "log_sy_dist"
+  ],
+  "n_features": 20,
+  "scaler_mean": [
+    25.560833292970155,
+    0.13460360990145173,
+    6.4986823561924885,
+    25.79798072630463,
+    0.004804193102388817,
+    860.1479806436745,
+    379.86174009524547,
+    5482.1013948844,
+    1.0138716154850602,
+    0.9225480027651894,
+    4.444814037176434,
+    -0.07453644673169983,
+    718.4176214993471,
+    0.2080609381835047,
+    0.06723511712452174,
+    0.25520673162768975,
+    2.5096081607032654,
+    2.8122041565472364,
+    1.3067653308078833,
+    6.282567205820584
+  ],
+  "scaler_scale": [
+    65.35558673089939,
+    0.14958115452650433,
+    95.7136878735263,
+    149.5999970781158,
+    0.03670958665306548,
+    406.04043215477435,
+    1523.7997346151017,
+    790.6255730076459,
+    0.6007659751230484,
+    0.21431383648388236,
+    0.23393895377752685,
+    0.22750864733327406,
+    468.1251943857583,
+    0.1035242334515346,
+    1.1110805296756134,
+    0.5096713872352066,
+    1.1106401895153042,
+    0.4850417180975384,
+    0.6177089533843413,
+    0.9186321931600263
+  ],
+  "input_dtype": "float32",
+  "output_dtype": "float32",
+  "output_description": "Single sigmoid value \u2014 probability of being habitable",
+  "threshold": 0.6200000000000003,
+  "n_train": 10415,
+  "n_test": 2604,
+  "test_accuracy": 0.9969278033794163,
+  "test_f1": 0.92,
+  "classification_report": {
+    "Not Habitable": {
+      "precision": 0.999607996863975,
+      "recall": 0.9972624168947986,
+      "f1-score": 0.9984338292873923,
+      "support": 2557.0
+    },
+    "Potentially Habitable": {
+      "precision": 0.8679245283018868,
+      "recall": 0.9787234042553191,
+      "f1-score": 0.92,
+      "support": 47.0
+    },
+    "accuracy": 0.9969278033794163,
+    "macro avg": {
+      "precision": 0.9337662625829308,
+      "recall": 0.9879929105750589,
+      "f1-score": 0.9592169146436962,
+      "support": 2604.0
+    },
+    "weighted avg": {
+      "precision": 0.9972312215097437,
+      "recall": 0.9969278033794163,
+      "f1-score": 0.9970181649338947,
+      "support": 2604.0
+    }
+  }
+}
